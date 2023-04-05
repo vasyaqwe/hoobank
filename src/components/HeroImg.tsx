@@ -21,11 +21,11 @@ export const HeroImg = () => {
             <motion.img className='absolute top-[-50px] left-[10%] md:left-auto' src={ball3} style={{ y: y3 }} alt={'a floating blue ball'} />
             <img className='justify-self-end' src={heroImg} alt="" />
             <div className="shapes-wrapper absolute w-full min-h-[600px]" aria-hidden={"true"}>
-                <motion.div className={`${className} left-[11%] 
+                {/* <motion.div className={`${className} left-[11%] 
                 bg-gradient-to-br blurred-bg rounded-full blur-3xl from-gradient-purple-400  to-gradient-blue-400 `}
                     animate={{ y: [0, 10, 10], scale: [1, 1.2, 1], }}
                     transition={{ duration: 5, repeat: Infinity, repeatType: "reverse", }}
-                />
+                /> */}
             </div>
         </div>
     )
