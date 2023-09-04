@@ -151,6 +151,6 @@ input {
   rotate: 25deg;
 }
 
-.social:hover path {
-  fill: #5CE1E6;
+.social:hover {
+  opacity: .7;
 }

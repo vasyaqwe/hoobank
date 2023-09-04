@@ -1,10 +1,20 @@
-import React, { ReactNode } from 'react'
+import { ReactNode } from "react"
+import { cn } from "../lib/utils"
 
-export const Button = ({ children, className }: { children: ReactNode, className?: string }) => {
+type ButtonProps = React.ComponentProps<"button"> & {
+    children: ReactNode
+    className?: string
+}
+
+export const Button = ({ children, className }: ButtonProps) => {
     return (
-        <button className={`bg-gradient-to-br ${className}
-         from-accent-100 via-accent-400 to-accent-700 hover:from-accent-700 hover:to-accent-100
-          text-black py-4 px-7 rounded-lg font-medium md:text-lg`}>
+        <button
+            className={cn(
+                `rounded-lg bg-gradient-to-br from-accent-100 via-accent-400 to-accent-700 px-7 py-4 font-medium text-black
+                 hover:from-accent-700 hover:to-accent-100 md:text-lg`,
+                className
+            )}
+        >
             {children}
         </button>
     )

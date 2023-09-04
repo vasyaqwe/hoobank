@@ -1,8 +1,7 @@
-import { useEffect, useState } from 'react'
-import logo from '../assets/logo.svg'
-import { Navbar } from '../components/Navbar'
-import { useWidth } from '../useWidth'
-import { GradientBlur } from '../components/GradientBlur'
+import { useEffect, useState } from "react"
+import logo from "../assets/logo.svg"
+import { Navbar } from "../components/Navbar"
+import { useWidth } from "../useWidth"
 
 export const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
@@ -12,10 +11,17 @@ export const Header = () => {
     }, [width])
 
     return (
-        <header className='pt-7 flex items-center justify-between max-w-7xl mx-auto px-7 relative'>
-            <img src={logo} alt={'HooBank logo'} />
+        <header className="relative mx-auto flex max-w-7xl items-center justify-between px-7 pt-7">
+            <img
+                src={logo}
+                alt={"HooBank logo"}
+            />
             <Navbar navOpen={navOpen} />
-            <button onClick={() => setNavOpen(open => !open)} className='nav-toggle sm:hidden' aria-expanded={navOpen}>
+            <button
+                onClick={() => setNavOpen((open) => !open)}
+                className="nav-toggle sm:hidden"
+                aria-expanded={navOpen}
+            >
                 <span className="sr-only">Menu</span>
             </button>
         </header>

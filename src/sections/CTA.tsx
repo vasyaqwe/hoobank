@@ -3,16 +3,21 @@ import { H2 } from "../components/H2"
 
 export const CTA = () => {
     return (
-        <section className="max-w-7xl px-7 mx-auto w-full">
-            <div className="py-8 px-10 sm:py-16 sm:px-10 lg:py-12 lg:px-24 rounded-2xl 
-            bg-gradient-to-bl from-neutral-800 to-secondary-900
-            grid gap-4 lg:grid-cols-[1fr_max-content] lg:items-center 
-            ">
+        <section className="mx-auto w-full max-w-7xl px-7">
+            <div
+                className="grid gap-4 rounded-2xl bg-gradient-to-bl from-neutral-800 to-secondary-900 px-10 
+            py-8 sm:px-10 sm:py-16
+            lg:grid-cols-[1fr_max-content] lg:items-center lg:px-24 lg:py-12 
+            "
+            >
                 <div>
                     <H2>Let’s try our service now!</H2>
-                    <p className="md:text-lg mt-4 max-w-md">Everything you need to accept card payments and grow your business anywhere on the planet.</p>
+                    <p className="mt-4 max-w-md md:text-lg">
+                        Everything you need to accept card payments and grow
+                        your business anywhere on the planet.
+                    </p>
                 </div>
-                <Button className="justify-self-start mt-3">Get Started</Button>
+                <Button className="mt-3 justify-self-start">Get Started</Button>
             </div>
         </section>
     )
