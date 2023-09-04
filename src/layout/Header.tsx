@@ -5,7 +5,7 @@ import { useWidth } from "../useWidth"
 
 export const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
-    const { width, smallScreen } = useWidth()
+    const { width } = useWidth()
     useEffect(() => {
         width! > 640 ? setNavOpen(true) : setNavOpen(false)
     }, [width])
