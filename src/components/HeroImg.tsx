@@ -30,7 +30,7 @@ export const HeroImg = () => {
     const className = `absolute w-[300px] h-[500px] z-[-1]`
 
     return (
-        <div className="relative ml-auto grid max-w-[572px] pl-5">
+        <div className="relative ml-auto grid w-full max-w-[572px] pl-5">
             <motion.img
                 className="absolute bottom-[35%] left-10"
                 style={{ y: y1 }}
@@ -44,7 +44,7 @@ export const HeroImg = () => {
                 alt={"a floating blue ball"}
             />
             <motion.img
-                className="absolute left-[10%] top-[-50px] md:left-auto"
+                className="absolute left-[10%] top-[-10px] md:left-auto"
                 src={ball3}
                 style={{ y: y3 }}
                 alt={"a floating blue ball"}
@@ -52,7 +52,7 @@ export const HeroImg = () => {
             <img
                 className="justify-self-end"
                 src={heroImg}
-                alt=""
+                alt="Hoobank - The Next Generation Payment Method."
             />
             <div
                 className="shapes-wrapper absolute min-h-[600px] w-full"
@@ -61,11 +61,10 @@ export const HeroImg = () => {
                 <motion.div
                     className={`${className} blurred-bg 
                 left-[11%] rounded-full bg-gradient-to-br from-gradient-purple-400 to-gradient-blue-400  blur-2xl `}
-                    animate={{ y: [0, 10, 10], scale: [1, 1.2, 1] }}
+                    animate={{ opacity: 1 }}
+                    initial={{ opacity: 0 }}
                     transition={{
-                        duration: 5,
-                        repeat: Infinity,
-                        repeatType: "reverse",
+                        duration: 3,
                     }}
                 />
             </div>
